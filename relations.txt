@@ -1,0 +1,54 @@
+ID --> MID
+ID --> MN
+
+SN --> SID
+
+MN --> MID
+
+UID --> UN
+
+SID --> SN
+SID --> TI
+SID --> SN
+SID --> RA
+SID --> IMDB
+
+PID --> HID
+PID --> PN
+PID --> S
+PID --> HS
+PID --> HZ
+PID --> HC
+
+HID --> HS
+HID --> HZ
+HID --> HC
+
+HZ --> HC
+
+MID --> MN
+MID --> D
+MID --> HID
+MID --> HN
+MID --> AID
+MID --> AN
+MID --> RID
+MID --> RN
+MID --> H
+MID --> A
+HID --> HN
+
+HN --> HID
+
+AID --> AN
+
+AN --> AID
+
+RID --> RN 
+
+RN --> RID 
+
+Z --> BL 
+
+Z --> T 
+
