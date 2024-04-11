@@ -118,9 +118,9 @@ INSERT INTO Shows0
 SELECT DISTINCT SID, UID, S
 FROM Shows;
 
+
 -- Rental
 --- Tables
-
 CREATE TABLE Rentals1(
     HZ INT NOT NULL,
     HC VARCHAR NOT NULL,
@@ -151,6 +151,7 @@ CREATE TABLE Rentals0 (
     FOREIGN KEY (HID) REFERENCES Rentals2 (HID)
 );
 
+-- Inserts
 INSERT INTO Rentals1
 SELECT DISTINCT HZ, HC
 FROM Rentals;
@@ -167,6 +168,9 @@ INSERT INTO Rentals0
 SELECT DISTINCT PID, HID
 FROM Rentals;
 
+
+-- Matches
+--- Tables
 CREATE TABLE Matches1(
     MID INT NOT NULL,
     D DATE NOT NULL,
@@ -205,6 +209,8 @@ CREATE TABLE Matches0(
     FOREIGN KEY (RID) REFERENCES Matches4 (RID)
 );
 
+
+-- Inserts
 INSERT INTO Matches1
 SELECT DISTINCT MID, D, H, A 
 FROM Matches;
@@ -225,6 +231,9 @@ INSERT INTO Matches0
 SELECT DISTINCT MID, HID, AID, RID
 FROM Matches;
 
+
+-- Boats
+--- Tables
 CREATE TABLE Boats1(
     Z INT NOT NULL,
     BL CHAR(2) NOT NULL,
@@ -242,10 +251,11 @@ CREATE TABLE Boats0(
     FOREIGN KEY (Z) REFERENCES Boats1 (Z)
 );
 
+-- Inserts
 INSERT INTO Boats1
 SELECT DISTINCT Z, BL, T
 FROM Boats;
 
 INSERT INTO Boats0
-SELECT DISTINCT BL, BNo, Z
+SELECT DISTINCT BL, BNo, Z, BN, SSN
 FROM Boats;
